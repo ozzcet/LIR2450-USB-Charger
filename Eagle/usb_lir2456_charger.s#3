@@ -2879,10 +2879,10 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <part name="C2" library="SparkFun-Capacitors" deviceset="CAP" device="0805" value="4.7uF"/>
 <part name="R_SLOW" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="40kΩ"/>
 <part name="R_FAST" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="22kΩ"/>
-<part name="R3" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="470Ω"/>
-<part name="R4" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="470Ω"/>
-<part name="LED_C" library="SparkFun-LED" deviceset="LED" device="0603"/>
-<part name="LED_D" library="SparkFun-LED" deviceset="LED" device="0603"/>
+<part name="R3" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="200Ω"/>
+<part name="R4" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="320Ω"/>
+<part name="LED_ORANGE" library="SparkFun-LED" deviceset="LED" device="0603"/>
+<part name="LED_GREEN" library="SparkFun-LED" deviceset="LED" device="0603"/>
 <part name="BATTERY" library="SparkFun-Electromechanical" deviceset="BATTERY" device="20PTH"/>
 <part name="SPEED" library="jumper" deviceset="JP2E" device=""/>
 <part name="JP2" library="SparkFun-Connectors" deviceset="M02" device="JST-PTH-VERT" value=""/>
@@ -2901,8 +2901,8 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <instance part="R_FAST" gate="G$1" x="86.36" y="109.22"/>
 <instance part="R3" gate="G$1" x="127" y="124.46" rot="R270"/>
 <instance part="R4" gate="G$1" x="127" y="109.22" rot="R270"/>
-<instance part="LED_C" gate="G$1" x="134.62" y="104.14" rot="R270"/>
-<instance part="LED_D" gate="G$1" x="106.68" y="129.54" rot="R270"/>
+<instance part="LED_ORANGE" gate="G$1" x="134.62" y="104.14" rot="R270"/>
+<instance part="LED_GREEN" gate="G$1" x="106.68" y="129.54" rot="R270"/>
 <instance part="BATTERY" gate="G$1" x="71.12" y="78.74" rot="R90"/>
 <instance part="SPEED" gate="1" x="96.52" y="104.14" rot="R270"/>
 <instance part="JP2" gate="G$1" x="81.28" y="78.74"/>
@@ -2922,7 +2922,7 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <wire x1="78.74" y1="109.22" x2="78.74" y2="116.84" width="0.1524" layer="91"/>
 <pinref part="CONTROLLER" gate="G$1" pin="VSS"/>
 <wire x1="78.74" y1="116.84" x2="101.6" y2="116.84" width="0.1524" layer="91"/>
-<pinref part="LED_D" gate="G$1" pin="C"/>
+<pinref part="LED_GREEN" gate="G$1" pin="C"/>
 <wire x1="101.6" y1="116.84" x2="104.14" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="129.54" x2="101.6" y2="116.84" width="0.1524" layer="91"/>
 <pinref part="BATTERY" gate="G$1" pin="-"/>
@@ -2980,20 +2980,20 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <net name="N$4" class="0">
 <segment>
 <pinref part="R3" gate="G$1" pin="1"/>
-<pinref part="LED_D" gate="G$1" pin="A"/>
+<pinref part="LED_GREEN" gate="G$1" pin="A"/>
 <wire x1="127" y1="129.54" x2="109.22" y2="129.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$7" class="0">
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
-<pinref part="LED_C" gate="G$1" pin="C"/>
+<pinref part="LED_ORANGE" gate="G$1" pin="C"/>
 <wire x1="127" y1="104.14" x2="129.54" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="0">
 <segment>
-<pinref part="LED_C" gate="G$1" pin="A"/>
+<pinref part="LED_ORANGE" gate="G$1" pin="A"/>
 <wire x1="137.16" y1="104.14" x2="137.16" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="CONTROLLER" gate="G$1" pin="VDD"/>
 <wire x1="137.16" y1="93.98" x2="124.46" y2="93.98" width="0.1524" layer="91"/>

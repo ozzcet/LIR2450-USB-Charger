@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
@@ -3146,34 +3147,75 @@ Source: AVX .. aphvc.pdf</description>
 <part name="C2" library="eagle-ltspice" deviceset="C" device="" value="4.7uF"/>
 <part name="R_SLOW" library="eagle-ltspice" deviceset="R" device="" value="40kΩ"/>
 <part name="R_FAST" library="eagle-ltspice" deviceset="R" device="" value="22kΩ"/>
-<part name="R3" library="eagle-ltspice" deviceset="R" device="" value="200Ω"/>
-<part name="R4" library="eagle-ltspice" deviceset="R" device="" value="320Ω"/>
-<part name="LED_ORANGE" library="SparkFun-LED" deviceset="LED" device="0603"/>
-<part name="LED_GREEN" library="SparkFun-LED" deviceset="LED" device="0603"/>
 <part name="BATTERY" library="SparkFun-Electromechanical" deviceset="BATTERY" device="20PTH"/>
 <part name="SPEED" library="jumper" deviceset="JP2E" device=""/>
 <part name="JP2" library="SparkFun-Connectors" deviceset="M02" device="JST-PTH-VERT" value=""/>
 <part name="EXT" library="SparkFun-Connectors" deviceset="M02" device="PTH" value=""/>
+<part name="R4" library="eagle-ltspice" deviceset="R" device="" value="470Ω"/>
+<part name="LED_ORANGE" library="SparkFun-LED" deviceset="LED" device="0603"/>
+<part name="LED_GREEN" library="SparkFun-LED" deviceset="LED" device="0603"/>
+<part name="R3" library="eagle-ltspice" deviceset="R" device="" value="470Ω"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 </plain>
 <instances>
-<instance part="CONTROLLER" gate="G$1" x="114.3" y="104.14" rot="R180"/>
-<instance part="USBCONN" gate="G$1" x="60.96" y="104.14"/>
-<instance part="C1" gate="G$1" x="73.66" y="109.22"/>
-<instance part="C2" gate="G$1" x="73.66" y="91.44" rot="R90"/>
-<instance part="R_SLOW" gate="G$1" x="86.36" y="99.06"/>
-<instance part="R_FAST" gate="G$1" x="86.36" y="109.22"/>
-<instance part="R3" gate="G$1" x="127" y="124.46" rot="R270"/>
-<instance part="R4" gate="G$1" x="127" y="109.22" rot="R270"/>
-<instance part="LED_ORANGE" gate="G$1" x="134.62" y="104.14" rot="R270"/>
-<instance part="LED_GREEN" gate="G$1" x="106.68" y="129.54" rot="R270"/>
-<instance part="BATTERY" gate="G$1" x="71.12" y="78.74" rot="R90"/>
-<instance part="SPEED" gate="1" x="96.52" y="104.14" rot="R270"/>
-<instance part="JP2" gate="G$1" x="81.28" y="78.74"/>
-<instance part="EXT" gate="G$1" x="93.98" y="78.74"/>
+<instance part="CONTROLLER" gate="G$1" x="114.3" y="104.14" smashed="yes" rot="R180">
+<attribute name="NAME" x="121.92" y="90.932" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="121.92" y="121.92" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="USBCONN" gate="G$1" x="60.96" y="104.14" smashed="yes">
+<attribute name="NAME" x="55.88" y="99.06" size="1.27" layer="95"/>
+</instance>
+<instance part="C1" gate="G$1" x="73.66" y="109.22" smashed="yes">
+<attribute name="NAME" x="75.184" y="109.601" size="1.778" layer="95"/>
+<attribute name="VALUE" x="75.184" y="104.521" size="1.778" layer="96"/>
+</instance>
+<instance part="C2" gate="G$1" x="73.66" y="91.44" smashed="yes" rot="R90">
+<attribute name="NAME" x="73.279" y="92.964" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="78.359" y="92.964" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R_SLOW" gate="G$1" x="86.36" y="99.06" smashed="yes">
+<attribute name="NAME" x="82.55" y="100.5586" size="1.778" layer="95"/>
+<attribute name="VALUE" x="82.55" y="95.758" size="1.778" layer="96"/>
+</instance>
+<instance part="R_FAST" gate="G$1" x="86.36" y="109.22" smashed="yes">
+<attribute name="NAME" x="82.55" y="110.7186" size="1.778" layer="95"/>
+<attribute name="VALUE" x="82.55" y="105.918" size="1.778" layer="96"/>
+</instance>
+<instance part="BATTERY" gate="G$1" x="71.12" y="78.74" smashed="yes" rot="R90">
+<attribute name="NAME" x="66.04" y="74.93" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="77.47" y="74.93" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="SPEED" gate="1" x="96.52" y="104.14" smashed="yes" rot="R270">
+<attribute name="NAME" x="96.52" y="107.95" size="1.778" layer="95"/>
+<attribute name="VALUE" x="96.52" y="98.425" size="1.778" layer="96"/>
+</instance>
+<instance part="JP2" gate="G$1" x="81.28" y="78.74" smashed="yes">
+<attribute name="VALUE" x="78.74" y="73.66" size="1.778" layer="96"/>
+<attribute name="NAME" x="78.74" y="84.582" size="1.778" layer="95"/>
+</instance>
+<instance part="EXT" gate="G$1" x="93.98" y="78.74" smashed="yes">
+<attribute name="VALUE" x="91.44" y="73.66" size="1.778" layer="96"/>
+<attribute name="NAME" x="91.44" y="84.582" size="1.778" layer="95"/>
+</instance>
+<instance part="R4" gate="G$1" x="134.62" y="104.14" smashed="yes">
+<attribute name="NAME" x="130.81" y="105.6386" size="1.778" layer="95"/>
+<attribute name="VALUE" x="130.81" y="100.838" size="1.778" layer="96"/>
+</instance>
+<instance part="LED_ORANGE" gate="G$1" x="127" y="109.22" smashed="yes" rot="R180">
+<attribute name="NAME" x="123.444" y="113.792" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="121.285" y="113.792" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="LED_GREEN" gate="G$1" x="119.38" y="129.54" smashed="yes" rot="R270">
+<attribute name="NAME" x="114.808" y="125.984" size="1.778" layer="95"/>
+<attribute name="VALUE" x="114.808" y="123.825" size="1.778" layer="96"/>
+</instance>
+<instance part="R3" gate="G$1" x="106.68" y="129.54" smashed="yes">
+<attribute name="NAME" x="102.87" y="131.0386" size="1.778" layer="95"/>
+<attribute name="VALUE" x="102.87" y="126.238" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -3211,10 +3253,10 @@ Source: AVX .. aphvc.pdf</description>
 <junction x="78.74" y="109.22"/>
 <pinref part="CONTROLLER" gate="G$1" pin="VSS"/>
 <wire x1="78.74" y1="116.84" x2="101.6" y2="116.84" width="0.1524" layer="91"/>
-<pinref part="LED_GREEN" gate="G$1" pin="C"/>
 <wire x1="101.6" y1="116.84" x2="104.14" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="129.54" x2="101.6" y2="116.84" width="0.1524" layer="91"/>
 <junction x="101.6" y="116.84"/>
+<pinref part="R3" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -3242,32 +3284,33 @@ Source: AVX .. aphvc.pdf</description>
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="R3" gate="G$1" pin="1"/>
-<pinref part="LED_GREEN" gate="G$1" pin="A"/>
-<wire x1="127" y1="129.54" x2="109.22" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="129.54" x2="111.76" y2="129.54" width="0.1524" layer="91"/>
+<pinref part="R3" gate="G$1" pin="2"/>
+<pinref part="LED_GREEN" gate="G$1" pin="C"/>
 </segment>
 </net>
 <net name="N$7" class="0">
 <segment>
-<pinref part="R4" gate="G$1" pin="2"/>
-<pinref part="LED_ORANGE" gate="G$1" pin="C"/>
 <wire x1="127" y1="104.14" x2="129.54" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="R4" gate="G$1" pin="1"/>
+<pinref part="LED_ORANGE" gate="G$1" pin="A"/>
+<wire x1="127" y1="104.14" x2="127" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="0">
 <segment>
-<wire x1="137.16" y1="134.62" x2="73.66" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="134.62" x2="73.66" y2="134.62" width="0.1524" layer="91"/>
 <pinref part="USBCONN" gate="G$1" pin="VBUS"/>
 <pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="71.12" y1="111.76" x2="73.66" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="111.76" x2="73.66" y2="134.62" width="0.1524" layer="91"/>
 <junction x="73.66" y="111.76"/>
 <pinref part="CONTROLLER" gate="G$1" pin="VDD"/>
-<wire x1="137.16" y1="93.98" x2="124.46" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="LED_ORANGE" gate="G$1" pin="A"/>
-<wire x1="137.16" y1="93.98" x2="137.16" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="104.14" x2="137.16" y2="134.62" width="0.1524" layer="91"/>
-<junction x="137.16" y="104.14"/>
+<wire x1="139.7" y1="93.98" x2="124.46" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="93.98" x2="139.7" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="R4" gate="G$1" pin="2"/>
+<wire x1="139.7" y1="104.14" x2="139.7" y2="134.62" width="0.1524" layer="91"/>
+<junction x="139.7" y="104.14"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -3293,13 +3336,14 @@ Source: AVX .. aphvc.pdf</description>
 </net>
 <net name="N$1" class="0">
 <segment>
-<pinref part="R3" gate="G$1" pin="2"/>
-<pinref part="R4" gate="G$1" pin="1"/>
-<wire x1="127" y1="119.38" x2="127" y2="116.84" width="0.1524" layer="91"/>
 <pinref part="CONTROLLER" gate="G$1" pin="STAT"/>
 <wire x1="127" y1="116.84" x2="127" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="124.46" y1="116.84" x2="127" y2="116.84" width="0.1524" layer="91"/>
 <junction x="127" y="116.84"/>
+<pinref part="LED_ORANGE" gate="G$1" pin="C"/>
+<pinref part="LED_GREEN" gate="G$1" pin="A"/>
+<wire x1="127" y1="116.84" x2="127" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="127" y1="129.54" x2="121.92" y2="129.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
